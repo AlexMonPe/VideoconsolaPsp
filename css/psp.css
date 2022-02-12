@@ -1,103 +1,196 @@
-@font-face {
-    font-family: clarendon;
-    src: url(images/clarendon);
-}
+
 body{
-    background-color: rgb(157, 190, 190);
+    background-color: rgb(167 167 167);
 }
-.container {
-    background-color: black;
-    width: 780px;
-    height: 330px;
-    border-radius: 175px;
-    margin: 100px 100px;
-    
-}
-
-
-
-.pantalla {
-    
-    background-image: url(https://cdn1.epicgames.com/offer/6f43ab8025ad42d18510aa91e9eb688b/EGS_FINALFANTASYVIIREMAKEINTERGRADE_SquareEnix_S1_2560x1440-85f829541a833442eaace75d02e0f07d);
-    background-size: cover;
-    width: 460px;
-    height: 250px;
-    margin-top: 2em;
-    border: 0.15rem solid #00000096;
-    border-radius: 0.3rem;
+.videoconsola {
+background-color: black;
+width: 788px;
+height: 330px;
+border-radius: 175px;
+margin: 100px 100px;
 }
 .container {
     display:flex;
     width: 780px;
     height: 330px;
     flex-direction: row;
+    justify-content: flex-end;
 }
 .parte-izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .cruceta{
-    background: red;
-    width: 160px;
-    height: 250px;
-    margin-top: 2em;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    color: #0808085c;
+    border: medium double #252525;
+    border-radius: 50%;
+    margin-left: 19px;
 }
 .cross{
-background-color: white;
-position: absolute;
+    display:flex;
+    border: 2px solid #343333f2;
+    border-radius: 12px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.vertical {
+    height: 35px;
+    width: 35px;
 }
 .horizontal {
-    width: 160px;
-    height: 40px;
-    background-color: green;
+    height: 35px;
+    width: 35px;
 }
-.vertical{
-    width: 40px;
-    height: 160px;
-    background-color: green;
+.JD{
+    display: flex;
+    flex-direction: row-reverse;
 }
+.joystick{
+    background-image: url(/images/joystick-texture.jpg);
+    background-size: cover;
+    display: inline;
+    border: 2px solid #565555bd;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-right: 17px;
+}
+.leds{
+    /* display: flex; */
+    width: 37px;
+    font-size: 11px;
+    display: inline;
+}
+.wifi {
+    background-image: url(/Images/wifi.png);
+    background-size: cover;
+    width: 17px;
+    height: 15px;
+    margin-left: 5px;
+}
+.memory{
+    background-image: url(/Images/Stick.jpg);
+    background-size: cover;
+    width: 21px;
+    height: 18px;
+    margin-left: -12px;
+    margin-top: -10px;
+}
+
+        /* ------------PARTE CENTRAL------------ */
+
+.pantalla {
+    background-image: url(/images/FF7.jpg);
+    background-size: cover;
+    width: 452px;
+    height: 250px;margin-top: 1.5em;
+    margin-right: 7px;
+    border: 0.15rem solid #00000096;
+    border-radius: 0.3rem;
+}
+
+.bottom-buttons{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 36px;
+    justify-content: space-around;
+}
+.home {
+    height: 1.6em;
+    display: block;
+    border: 2px solid #232323;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+    font-size: 10px;
+}
+.volumen{
+    display: flex;
+    font-size: 11px;
+    align-items: center;
+}
+.vols{
+    display: inline;
+    width: 20px;
+    height: 16px;
+    border: 2px solid #232323;
+    border-radius: 16px 17px 17px 15px;
+    text-align: center;
+}
+.psplogo{
+    background-image: url(/Images/botpsp.png);
+    width: 110px;
+    height: 20px;
+    background-size: cover;
+    margin: 0 27px;
+}
+
 .parte-derecha{
     width: 160px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .botonR{
     display: block;
     height: 38px;
-    width: 99px;
-    background-color: gray;
-    border-radius: 0px 39px;
+    width: 97px;
+    background-color: #a7a7a7;
+    border-radius: 0px 52px 0px 52px;
+    border: 2px solid gray;
+    margin-right: 47px;
+}
+.botonL{
+    display: block;
+    height: 38px;
+    width: 97px;
+    background-color: #a7a7a7;
+    border-radius: 52px 0px 52px 0px;
+    margin-left: 48px;
+    border: 2px solid gray;
+}
+
+.palicon{
+    background-image: url(/Images/palicon.png);
+    background-size: cover;
+    display:block;
+    width: 31px;
+    height: 25px;
+    margin-right: 34px;
 }
 .logo{
-    color: white;
-    font-family: clarendon;
-    font-size: 20px;
-    display: block;
-    height: 53px;
-    margin: 10px 0px 0px 10px;
+        background-image: url(/Images/sony.png);
+        background-size: cover;
+        display:block;
+        width: 63px;
+        height: 35px;
 }
-img{
-   height: 40px;
-   width: 70px;
-}
+
 .buttons-group{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     align-self: center;
+    border: medium double #313030;
+    border-radius: 50%;
 }
 
 .button{
     display:flex;
-    border: 2px solid white;
+    border: 2px solid #313030;
     border-radius: 50%;
     height: 35px;
     width: 35px;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .triangle-button{
@@ -129,8 +222,26 @@ p {
     margin-left: 35px;
 }
 .vacioblanco{
-    background-color: rgb(157, 190, 190);
+    background-color: rgb(167 167 167);
     height: 40px;
-    width: 100px;
+    width: 103px;
     border-radius: 39px 0px;
+}
+.agarreplastico{
+    display: block;
+    height: 36px;
+    width: 106px;
+    background-color: #808080;
+    border-radius: 0px 98px;
+    margin-left: 59px;
+    border: 2px solid #8989895e;
+}
+.plastico{
+    display: block;
+    height: 20px;
+    width: 86px;
+    background-color: #a7a7a7;
+    border-radius: 0px 24px;
+    border: 2px solid #404040a3;
+    margin: 5px 9px;
 }
