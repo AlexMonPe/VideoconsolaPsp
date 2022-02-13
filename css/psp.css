@@ -1,14 +1,15 @@
-
+        /* -------------------------- PRINCIPAL--------------------------------- */
 body{
     background-color: rgb(167 167 167);
 }
 .videoconsola {
-background-color: black;
-width: 788px;
-height: 330px;
-border-radius: 175px;
-margin: 100px 100px;
+background-color: black;
+width: 788px;
+height: 330px;
+border-radius: 175px;
+margin: 100px 100px;
 }
+
 .container {
     display:flex;
     width: 780px;
@@ -16,18 +17,38 @@ body{
     flex-direction: row;
     justify-content: flex-end;
 }
+.altavoz{
+    position: absolute;
+    z-index: 2;
+    background-color: #484646;
+    height: 11px;
+    width: 18px;
+    border: 1px solid #6e6a6a;
+    border-radius: 5px;
+}
+
+        /* ------------------------- PARTE IZQUIERDA ---------------------------- */
 .parte-izquierda{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
+.botonL{
+    display: block;
+    height: 38px;
+    width: 97px;
+    background-color: #a7a7a7;
+    border-radius: 52px 0px 52px 0px;
+    margin-left: 48px;
+    border: 2px solid gray;
+}
 .cruceta{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     color: #0808085c;
-    border: medium double #252525;
+    border: 6px double #252525;
     border-radius: 50%;
     margin-left: 19px;
 }
@@ -56,14 +77,14 @@ body{
     background-image: url(/images/joystick-texture.jpg);
     background-size: cover;
     display: inline;
-    border: 2px solid #565555bd;
+    border: 4px solid #878787bd;
     border-radius: 50%;
+    border-style: double;
     height: 50px;
     width: 50px;
     margin-right: 17px;
 }
 .leds{
-    /* display: flex; */
     width: 37px;
     font-size: 11px;
     display: inline;
@@ -75,7 +96,7 @@ body{
     height: 15px;
     margin-left: 5px;
 }
-.memory{
+.memory {
     background-image: url(/Images/Stick.jpg);
     background-size: cover;
     width: 21px;
@@ -83,18 +104,41 @@ body{
     margin-left: -12px;
     margin-top: -10px;
 }
-
-        /* ------------PARTE CENTRAL------------ */
+.agarreplastico{
+    display: block;
+    height: 36px;
+    width: 106px;
+    background-color: #808080;
+    border-radius: 0px 98px;
+    margin-left: 59px;
+    border: 2px solid #5a5a5a5e;
+}
+.plastico{
+    display: block;
+    height: 20px;
+    width: 86px;
+    background-color: #a7a7a7;
+    border-radius: 0px 24px;
+    border: 2px solid #404040a3;
+    margin: 5px 9px;
+}
+.altavozL{
+    left: 243px;
+    bottom: 40em;
+}
+        /* ---------------------------------PARTE CENTRAL------------------------------- */
 
 .pantalla {
     background-image: url(/images/FF7.jpg);
     background-size: cover;
     width: 452px;
-    height: 250px;margin-top: 1.5em;
+    height: 250px;
+    margin-top: 1.5em;
     margin-right: 7px;
     border: 0.15rem solid #00000096;
     border-radius: 0.3rem;
 }
+        /* ---------------------------------PARTE CENTRAL ABAJO --------------------------- */
 
 .bottom-buttons{
     display: flex;
@@ -112,7 +156,7 @@ body{
     text-align: center;
     font-size: 10px;
 }
-.volumen{
+.volumen {
     display: flex;
     font-size: 11px;
     align-items: center;
@@ -124,15 +168,16 @@ body{
     border: 2px solid #232323;
     border-radius: 16px 17px 17px 15px;
     text-align: center;
+    margin: 0 5px;
 }
 .psplogo{
     background-image: url(/Images/botpsp.png);
     width: 110px;
     height: 20px;
     background-size: cover;
-    margin: 0 27px;
+    margin: 0 15px;
 }
-
+    /* ------------------------------- PARTE DERECHA -------------------------- */ 
 .parte-derecha{
     width: 160px;
     display: flex;
@@ -148,16 +193,6 @@ body{
     border: 2px solid gray;
     margin-right: 47px;
 }
-.botonL{
-    display: block;
-    height: 38px;
-    width: 97px;
-    background-color: #a7a7a7;
-    border-radius: 52px 0px 52px 0px;
-    margin-left: 48px;
-    border: 2px solid gray;
-}
-
 .palicon{
     background-image: url(/Images/palicon.png);
     background-size: cover;
@@ -179,8 +214,9 @@ body{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     align-self: center;
-    border: medium double #313030;
     border-radius: 50%;
+    position: relative;
+    z-index: 2;
 }
 
 .button{
@@ -191,21 +227,23 @@ body{
     width: 35px;
     justify-content: center;
     align-items: flex-end;
+    background-color: black;
 }
 
-.triangle-button{
+.triangle{
     color: #2CA873;
     font-size: 28px;
 }
-.square-button{
+.square{
     color: #FBB4F6;
     font-size: 39px;
 }
-.cross-button{
-    color: #54ACE2;
+
+.X{
+    color: #85CEF9;
     font-size: 24px;
 }
-.circle-button{
+.circle{
     color: #F483AB;
     font-size: 24px;
 }
@@ -216,10 +254,19 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-left: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
-p {
-    margin-left: 35px;
+#btnpwr {
+    display: inline-block;
+    background-color: rgb(2, 2, 2);
+    border: none;
+    color: white;
+    height: 1.2em;
+    width: 1.5em;
+}
+.altavozR{
+    left: 746px;
+    bottom: 40em;
 }
 .vacioblanco{
     background-color: rgb(167 167 167);
@@ -227,21 +274,33 @@ p {
     width: 103px;
     border-radius: 39px 0px;
 }
-.agarreplastico{
-    display: block;
-    height: 36px;
-    width: 106px;
-    background-color: #808080;
-    border-radius: 0px 98px;
-    margin-left: 59px;
-    border: 2px solid #8989895e;
+
+/* ---------------- ENCENDER POWER  -------------------*/
+.encender {
+    background-color: green;
+    border-radius: 50%;
 }
-.plastico{
-    display: block;
-    height: 20px;
+.bordetonera{
+    background-color: #bb262600;
     width: 86px;
-    background-color: #a7a7a7;
-    border-radius: 0px 24px;
-    border: 2px solid #404040a3;
-    margin: 5px 9px;
+    height: 86px;
+    position: absolute;
+    left: 766px;
+    top: 213px;
+    border: double 6px #2e2d2d;
+    border-radius: 50%;
+    z-index: 1;
 }
+.tomaAC{
+    position: absolute;
+    height: 3px;
+    width: 29px;
+    background-color: yellow;
+    border-radius: 5px;
+    left: 49em;
+    top: 390px;
+    border: 1px solid;
+}
+
+
+
